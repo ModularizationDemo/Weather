@@ -7,10 +7,15 @@
 //
 
 #import "Target_Weather.h"
+#import "SXWeatherView.h"
 
 @implementation Target_Weather
-- (UIViewController *)Action_aViewController:(NSDictionary *)params {
-    UIViewController *viewController = [UIStoryboard storyboardWithName:@"SXWeatherPage" bundle:nil].instantiateInitialViewController;
-    return viewController;
+- (UIView *)Action_aView:(NSDictionary *)params {
+    SXWeatherView *view = [SXWeatherView view];
+    if (params) {
+        void (^callback)() = params[@"callback"];
+        view.callback = callback;
+    }
+    return view;
 }
 @end

@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = "Classes/**/*.h"
 
-  # s.resource  = "icon.png"
+  s.resources  = "Weather/Weather/**/*.{storyboard,xib}", "Weather/Assets.xcassets"
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -43,10 +43,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "HLNetworking"
-  # s.dependency "HLNetworking+Lovek12"
+  s.dependency "HLNetworking/Center"
+  s.dependency "Tools"
   # s.dependency "HLBaseUser"
-  # s.dependency "Lothar
+  # s.dependency "Lothar"
   # s.dependency "UMengUShare/Social/Sina"
   # s.dependency "UMengUShare/Social/WeChat"
   # s.dependency "UMengUShare/Social/QQ""

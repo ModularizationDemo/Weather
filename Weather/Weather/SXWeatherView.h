@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 @class SXWeatherEntity;
 @interface SXWeatherView : UIView
+@property (nonatomic, copy) void(^callback)();
+
 + (instancetype)view;
 - (void)addAnimate;
-
-- (void)setWeatherModel:(SXWeatherEntity *)weatherModel;
 @end

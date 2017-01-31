@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface Target_Weather : NSObject
-- (UIViewController *)Action_aViewController:(NSDictionary *)params;
+- (UIView *)Action_aView:(NSDictionary *)params;
 @end

@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF377E8E1E405BAD0019110C /* HLAPICenter+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = CF377E8D1E405BAD0019110C /* HLAPICenter+Weather.m */; };
 		CF377E921E405F9A0019110C /* Target_Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = CF377E911E405F9A0019110C /* Target_Weather.m */; };
-		CF377E951E406CA60019110C /* SXWeatherPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF377E941E406CA60019110C /* SXWeatherPage.m */; };
-		CF377E971E406CB30019110C /* SXWeatherPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF377E961E406CB30019110C /* SXWeatherPage.storyboard */; };
 		CF377E9A1E406F970019110C /* PersentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF377E991E406F970019110C /* PersentAnimator.m */; };
+		CF377E9F1E40816C0019110C /* SXWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF377E9E1E40816C0019110C /* SXWeatherView.xib */; };
 		CF4DCCA61E3B1FD300FDE632 /* SXWeatherBgEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4DCC961E3B1FD300FDE632 /* SXWeatherBgEntity.m */; };
 		CF4DCCA71E3B1FD300FDE632 /* SXWeatherDetailEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4DCC981E3B1FD300FDE632 /* SXWeatherDetailEntity.m */; };
 		CF4DCCA81E3B1FD300FDE632 /* SXWeatherDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4DCC9A1E3B1FD300FDE632 /* SXWeatherDetailPage.m */; };
@@ -34,11 +33,9 @@
 		CF377E8D1E405BAD0019110C /* HLAPICenter+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HLAPICenter+Weather.m"; sourceTree = "<group>"; };
 		CF377E901E405F9A0019110C /* Target_Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Weather.h; sourceTree = "<group>"; };
 		CF377E911E405F9A0019110C /* Target_Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Weather.m; sourceTree = "<group>"; };
-		CF377E931E406CA60019110C /* SXWeatherPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWeatherPage.h; sourceTree = "<group>"; };
-		CF377E941E406CA60019110C /* SXWeatherPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWeatherPage.m; sourceTree = "<group>"; };
-		CF377E961E406CB30019110C /* SXWeatherPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SXWeatherPage.storyboard; sourceTree = "<group>"; };
 		CF377E981E406F970019110C /* PersentAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersentAnimator.h; sourceTree = "<group>"; };
 		CF377E991E406F970019110C /* PersentAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersentAnimator.m; sourceTree = "<group>"; };
+		CF377E9E1E40816C0019110C /* SXWeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWeatherView.xib; sourceTree = "<group>"; };
 		CF4DCC951E3B1FD300FDE632 /* SXWeatherBgEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWeatherBgEntity.h; sourceTree = "<group>"; };
 		CF4DCC961E3B1FD300FDE632 /* SXWeatherBgEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWeatherBgEntity.m; sourceTree = "<group>"; };
 		CF4DCC971E3B1FD300FDE632 /* SXWeatherDetailEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWeatherDetailEntity.h; sourceTree = "<group>"; };
@@ -108,9 +105,7 @@
 				CF4DCCA01E3B1FD300FDE632 /* SXWeatherItemView.xib */,
 				CF4DCCA11E3B1FD300FDE632 /* SXWeatherView.h */,
 				CF4DCCA21E3B1FD300FDE632 /* SXWeatherView.m */,
-				CF377E931E406CA60019110C /* SXWeatherPage.h */,
-				CF377E941E406CA60019110C /* SXWeatherPage.m */,
-				CF377E961E406CB30019110C /* SXWeatherPage.storyboard */,
+				CF377E9E1E40816C0019110C /* SXWeatherView.xib */,
 			);
 			name = Page;
 			sourceTree = "<group>";
@@ -255,9 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF377E9F1E40816C0019110C /* SXWeatherView.xib in Resources */,
 				CFD05A901E3AD0B500A76B72 /* LaunchScreen.storyboard in Resources */,
 				CF4DCCAC1E3B1FD300FDE632 /* SXWeatherItemView.xib in Resources */,
-				CF377E971E406CB30019110C /* SXWeatherPage.storyboard in Resources */,
 				CFD05A8D1E3AD0B500A76B72 /* Assets.xcassets in Resources */,
 				CF4DCCA91E3B1FD300FDE632 /* SXWeatherDetailPage.xib in Resources */,
 			);
@@ -324,7 +319,6 @@
 				CF4DCCAA1E3B1FD300FDE632 /* SXWeatherEntity.m in Sources */,
 				CF377E9A1E406F970019110C /* PersentAnimator.m in Sources */,
 				CFD05A851E3AD0B500A76B72 /* AppDelegate.m in Sources */,
-				CF377E951E406CA60019110C /* SXWeatherPage.m in Sources */,
 				CF4DCCAD1E3B1FD300FDE632 /* SXWeatherView.m in Sources */,
 				CF377E8E1E405BAD0019110C /* HLAPICenter+Weather.m in Sources */,
 				CFD05A821E3AD0B500A76B72 /* main.m in Sources */,

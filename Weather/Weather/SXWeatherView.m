@@ -11,6 +11,8 @@
 #import "SXWeatherDetailPage.h"
 #import <Tools/SXEasyMacro.h>
 #import <Tools/UIView+Frame.h>
+#import "PersentAnimator.h"
+#import "HLAPICenter+Weather.h"
 
 @interface SXWeatherView ()
 @property(nonatomic,strong)UIView *bottomView;
@@ -34,14 +36,40 @@
 @property (weak, nonatomic) IBOutlet UILabel *airPMLbl;
 @property (weak, nonatomic) IBOutlet UILabel *climateLbl;
 @property (weak, nonatomic) IBOutlet UILabel *localLbl;
+
+@property (nonatomic, strong) SXWeatherEntity *weatherModel;
 @end
 @implementation SXWeatherView
+- (IBAction)detailClick {
+    if (self.callback) {
+        self.callback();
+    }
+    SXWeatherDetailPage *wdvc = [[SXWeatherDetailPage alloc]init];
+    wdvc.weatherModel = self.weatherModel;
+    PersentAnimator *effect = [PersentAnimator shared];
+    effect.presentStyle = UIPresentCoverVertical;
+    wdvc.transitioningDelegate = effect;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:wdvc animated:YES completion:nil];
+}
 
 - (void)awakeFromNib{
     [super awakeFromNib];
     UIView *bottomView = [[UIView alloc]init];
     self.bottomView = bottomView;
     [self addSubview:bottomView];
+    [self sendWeatherRequest];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addAnimate) name:@"SXWeatherPageAddAnimate" object:nil];
+}
+
+- (void)sendWeatherRequest {
+    [[HLAPICenter weather]
+     .success(^(SXWeatherEntity *weatherEntity){
+        self.weatherModel = weatherEntity;
+    })
+     .failure(^(NSError *error){
+        NSLog(@"网络请求失败");
+    })
+     start];
 }
 
 - (void)layoutSubviews{
@@ -67,6 +95,7 @@
 
 - (void)setWeatherModel:(SXWeatherEntity *)weatherModel
 {
+    _weatherModel = weatherModel;
     self.nowTempLbl.text = [NSString stringWithFormat:@"%d",weatherModel.rt_temperature];
     SXWeatherDetailEntity *weatherDetail = weatherModel.detailArray[0];
     
@@ -239,6 +268,10 @@
 
     }];
 
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SXWeatherPageAddAnimate" object:nil];
 }
 
 @end

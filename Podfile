@@ -7,7 +7,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Weather' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-  pod 'ReactiveCocoa','2.5'
   pod 'HLNetworking/Center', '~> 2.0'
   pod 'SDWebImage','~> 3.7'
   
