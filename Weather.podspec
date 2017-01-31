@@ -45,6 +45,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "HLNetworking/Center"
   s.dependency "Tools"
+  s.dependency 'SDWebImage','~> 3.7'
   # s.dependency "HLBaseUser"
   # s.dependency "Lothar"
   # s.dependency "UMengUShare/Social/Sina"
