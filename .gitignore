@@ -1,0 +1,7 @@
+Weather.xcodeproj/xcuserdata/
+Weather.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+Weather.xcodeproj/project.xcworkspace/xcuserdata/
